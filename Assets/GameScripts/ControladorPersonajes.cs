@@ -6,6 +6,7 @@ public class ControladorPersonajes : MonoBehaviour
     public GameObject arqueologo;
     public GameObject momia;
     public UIController uiController;
+    public CamaraPorPantallas camaraScript;
 
     private GameObject personajeActivo;
 
@@ -36,6 +37,7 @@ public class ControladorPersonajes : MonoBehaviour
             personajeActivo = momia;
 
             uiController.ActualizarPersonaje("Momia");
+            camaraScript.ActualizarObjetivo(personajeActivo.transform);
         }
         else
         {
@@ -45,6 +47,7 @@ public class ControladorPersonajes : MonoBehaviour
             personajeActivo = arqueologo;
 
             uiController.ActualizarPersonaje("Arqueólogo");
+            camaraScript.ActualizarObjetivo(personajeActivo.transform);
         }
     }
 }
