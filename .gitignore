@@ -1,0 +1,26 @@
+[Ll]ibrary/
+[Tt]emp/
+[Oo]bj/
+[Bb]uild/
+[Bb]uilds/
+[Ll]ogs/
+[Mm]emoryCaptures/
+
+# Archivos del sistema
+.DS_Store
+Thumbs.db
+
+# Visual Studio
+.vscode/
+*.csproj
+*.unityproj
+*.sln
+*.user
+*.suo
+
+# Archivos de sistema
+*.pidb
+*.booproj
+
+# Unity Collab
+.collabignore
