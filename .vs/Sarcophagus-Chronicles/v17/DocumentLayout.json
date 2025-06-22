@@ -3,11 +3,19 @@
   "WorkspaceRootPath": "E:\\Agus\\Facultad\\Dise\u00F1o y desarrollo de videojuegos I\\Sarcophagus-Chronicles\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{EB329317-F345-341F-5B22-694D048DEB0E}|Assembly-CSharp.csproj|e:\\agus\\facultad\\dise\u00F1o y desarrollo de videojuegos i\\sarcophagus-chronicles\\assets\\gamescripts\\enemigo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{EB329317-F345-341F-5B22-694D048DEB0E}|Assembly-CSharp.csproj|solutionrelative:assets\\gamescripts\\enemigo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{EB329317-F345-341F-5B22-694D048DEB0E}|Assembly-CSharp.csproj|e:\\agus\\facultad\\dise\u00F1o y desarrollo de videojuegos i\\sarcophagus-chronicles\\assets\\gamescripts\\ataquecuerpoacuerpo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{EB329317-F345-341F-5B22-694D048DEB0E}|Assembly-CSharp.csproj|solutionrelative:assets\\gamescripts\\ataquecuerpoacuerpo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{EB329317-F345-341F-5B22-694D048DEB0E}|Assembly-CSharp.csproj|E:\\Agus\\Facultad\\Dise\u00F1o y desarrollo de videojuegos I\\Sarcophagus-Chronicles\\assets\\gamescripts\\controladorpersonajes.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{EB329317-F345-341F-5B22-694D048DEB0E}|Assembly-CSharp.csproj|solutionrelative:assets\\gamescripts\\controladorpersonajes.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{EB329317-F345-341F-5B22-694D048DEB0E}|Assembly-CSharp.csproj|e:\\agus\\facultad\\dise\u00F1o y desarrollo de videojuegos i\\sarcophagus-chronicles\\assets\\gamescripts\\camaraporpantallas.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{EB329317-F345-341F-5B22-694D048DEB0E}|Assembly-CSharp.csproj|E:\\Agus\\Facultad\\Dise\u00F1o y desarrollo de videojuegos I\\Sarcophagus-Chronicles\\assets\\gamescripts\\camaraporpantallas.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{EB329317-F345-341F-5B22-694D048DEB0E}|Assembly-CSharp.csproj|solutionrelative:assets\\gamescripts\\camaraporpantallas.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
@@ -18,7 +26,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 2,
+          "SelectedChildIndex": 1,
           "Children": [
             {
               "$type": "Bookmark",
@@ -26,7 +34,33 @@
             },
             {
               "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "Enemigo.cs",
+              "DocumentMoniker": "E:\\Agus\\Facultad\\Dise\u00F1o y desarrollo de videojuegos I\\Sarcophagus-Chronicles\\Assets\\GameScripts\\Enemigo.cs",
+              "RelativeDocumentMoniker": "Assets\\GameScripts\\Enemigo.cs",
+              "ToolTip": "E:\\Agus\\Facultad\\Dise\u00F1o y desarrollo de videojuegos I\\Sarcophagus-Chronicles\\Assets\\GameScripts\\Enemigo.cs",
+              "RelativeToolTip": "Assets\\GameScripts\\Enemigo.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABcAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-22T04:11:44.024Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
               "DocumentIndex": 1,
+              "Title": "AtaqueCuerpoACuerpo.cs",
+              "DocumentMoniker": "E:\\Agus\\Facultad\\Dise\u00F1o y desarrollo de videojuegos I\\Sarcophagus-Chronicles\\Assets\\GameScripts\\AtaqueCuerpoACuerpo.cs",
+              "RelativeDocumentMoniker": "Assets\\GameScripts\\AtaqueCuerpoACuerpo.cs",
+              "ToolTip": "E:\\Agus\\Facultad\\Dise\u00F1o y desarrollo de videojuegos I\\Sarcophagus-Chronicles\\Assets\\GameScripts\\AtaqueCuerpoACuerpo.cs",
+              "RelativeToolTip": "Assets\\GameScripts\\AtaqueCuerpoACuerpo.cs",
+              "ViewState": "AgIAAAgAAAAAAAAAAAAQwCUAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-22T04:10:53.09Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
               "Title": "CamaraPorPantallas.cs",
               "DocumentMoniker": "E:\\Agus\\Facultad\\Dise\u00F1o y desarrollo de videojuegos I\\Sarcophagus-Chronicles\\Assets\\GameScripts\\CamaraPorPantallas.cs",
               "RelativeDocumentMoniker": "Assets\\GameScripts\\CamaraPorPantallas.cs",
@@ -34,12 +68,11 @@
               "RelativeToolTip": "Assets\\GameScripts\\CamaraPorPantallas.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAEAAAAABAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-21T20:13:54.351Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-06-21T20:13:54.351Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 2,
               "Title": "ControladorPersonajes.cs",
               "DocumentMoniker": "E:\\Agus\\Facultad\\Dise\u00F1o y desarrollo de videojuegos I\\Sarcophagus-Chronicles\\Assets\\GameScripts\\ControladorPersonajes.cs",
               "RelativeDocumentMoniker": "Assets\\GameScripts\\ControladorPersonajes.cs",
@@ -47,8 +80,7 @@
               "RelativeToolTip": "Assets\\GameScripts\\ControladorPersonajes.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAAdAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-21T20:06:31.187Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-06-21T20:06:31.187Z"
             }
           ]
         }
