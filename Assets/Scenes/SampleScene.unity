@@ -430,7 +430,7 @@ SpriteRenderer:
   m_Size: {x: 3.7175, y: 3.875}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
-  m_WasSpriteAssigned: 1
+  m_WasSpriteAssigned: 0
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
 --- !u!4 &206168038
@@ -495,7 +495,7 @@ Rigidbody2D:
   m_Interpolate: 0
   m_SleepingMode: 1
   m_CollisionDetection: 0
-  m_Constraints: 0
+  m_Constraints: 4
 --- !u!61 &206168041
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -558,7 +558,11 @@ MonoBehaviour:
   capaEnemigos:
     serializedVersion: 2
     m_Bits: 128
-  "da\xF1o": 1
+  dano: 1
+  spriteRenderer: {fileID: 206168037}
+  spriteNormal: {fileID: 21300000, guid: 402d35a2e9ef21046b9c992af3551cf3, type: 3}
+  spriteAtaque: {fileID: 21300000, guid: 2aa347a2b46664c4d958098fca25bd13, type: 3}
+  duracionAtaque: 0.3
 --- !u!1 &300780747
 GameObject:
   m_ObjectHideFlags: 0
@@ -573,6 +577,7 @@ GameObject:
   - component: {fileID: 300780749}
   - component: {fileID: 300780753}
   - component: {fileID: 300780748}
+  - component: {fileID: 300780754}
   m_Layer: 0
   m_Name: Momia
   m_TagString: Untagged
@@ -670,7 +675,7 @@ Rigidbody2D:
   m_Interpolate: 0
   m_SleepingMode: 1
   m_CollisionDetection: 0
-  m_Constraints: 0
+  m_Constraints: 4
 --- !u!212 &300780751
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -757,7 +762,33 @@ MonoBehaviour:
   capaEnemigos:
     serializedVersion: 2
     m_Bits: 128
-  "da\xF1o": 1
+  dano: 1
+  spriteRenderer: {fileID: 0}
+  spriteNormal: {fileID: 0}
+  spriteAtaque: {fileID: 0}
+  duracionAtaque: 0.3
+--- !u!114 &300780754
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 300780747}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3e4b5a9ca281041f5a950f011c4070d8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  areaAtaque: {fileID: 2424031542649504756, guid: bbcdeeed8d74d45b099bfb4a99e90ef1, type: 3}
+  radioAtaque: 1
+  capaEnemigos:
+    serializedVersion: 2
+    m_Bits: 128
+  dano: 1
+  spriteRenderer: {fileID: 300780751}
+  spriteNormal: {fileID: 21300000, guid: a5aba0fe0dc55d944a5e1a604bc73dfc, type: 3}
+  spriteAtaque: {fileID: 21300000, guid: d2de90814089747f9983e7720c48f9a1, type: 3}
+  duracionAtaque: 0.3
 --- !u!114 &519420033 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 587794951363413528, guid: 8dad743bc4719df4cbfe7340a3b738f0, type: 3}
@@ -1428,6 +1459,18 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 573160018893252832, guid: 8dad743bc4719df4cbfe7340a3b738f0, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 2.5517893
+      objectReference: {fileID: 0}
+    - target: {fileID: 573160018893252832, guid: 8dad743bc4719df4cbfe7340a3b738f0, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0.059
+      objectReference: {fileID: 0}
+    - target: {fileID: 573160018893252832, guid: 8dad743bc4719df4cbfe7340a3b738f0, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0.1957
+      objectReference: {fileID: 0}
     - target: {fileID: 587794951363413528, guid: 8dad743bc4719df4cbfe7340a3b738f0, type: 3}
       propertyPath: objetivo
       value: 
