@@ -427,10 +427,10 @@ SpriteRenderer:
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
-  m_Size: {x: 3.7175, y: 3.875}
+  m_Size: {x: 1.0621428, y: 1.1071428}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
-  m_WasSpriteAssigned: 0
+  m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
 --- !u!4 &206168038
@@ -533,7 +533,7 @@ BoxCollider2D:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
     oldSize: {x: 1.0621428, y: 1.1071428}
-    newSize: {x: 3.7175, y: 3.875}
+    newSize: {x: 1.0621428, y: 1.1071428}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
     adaptiveTiling: 0
@@ -763,9 +763,9 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 128
   dano: 1
-  spriteRenderer: {fileID: 0}
-  spriteNormal: {fileID: 0}
-  spriteAtaque: {fileID: 0}
+  spriteRenderer: {fileID: 300780751}
+  spriteNormal: {fileID: 21300000, guid: a5aba0fe0dc55d944a5e1a604bc73dfc, type: 3}
+  spriteAtaque: {fileID: 21300000, guid: d2de90814089747f9983e7720c48f9a1, type: 3}
   duracionAtaque: 0.3
 --- !u!114 &300780754
 MonoBehaviour:

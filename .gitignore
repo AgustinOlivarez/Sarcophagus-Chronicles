@@ -24,3 +24,7 @@ Thumbs.db
 
 # Unity Collab
 .collabignore
+UserSettings/
+UserSettings/Layouts/default-2022.dwlt
+/.vs
+/.vs/Sarcophagus-Chronicles
