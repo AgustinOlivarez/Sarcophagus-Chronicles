@@ -11,6 +11,8 @@
 Thumbs.db
 
 # Visual Studio
+.vs/
+.vs/Sarcophagus-Chronicles/
 .vscode/
 *.csproj
 *.unityproj
@@ -26,5 +28,3 @@ Thumbs.db
 .collabignore
 UserSettings/
 UserSettings/Layouts/default-2022.dwlt
-/.vs
-/.vs/Sarcophagus-Chronicles
