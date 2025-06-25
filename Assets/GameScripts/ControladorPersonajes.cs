@@ -6,15 +6,19 @@ public class ControladorPersonajes : MonoBehaviour
     public GameObject arqueologo;
     public GameObject momia;
     public UIController uiController;
-    public CamaraPorPantallas camaraScript;
+    public CamaraSuave camaraScript;
 
     private GameObject personajeActivo;
+    public ParallaxFondo fondoParallax;
+
 
     void Start()
     {
         personajeActivo = arqueologo;
         arqueologo.SetActive(true);
         momia.SetActive(false);
+
+        camaraScript.ActualizarObjetivo(personajeActivo.transform);
     }
 
     void Update()
@@ -29,6 +33,8 @@ public class ControladorPersonajes : MonoBehaviour
     {
         Vector3 posicionActual = personajeActivo.transform.position;
 
+
+
         if (personajeActivo == arqueologo)
         {
             arqueologo.SetActive(false);
@@ -38,6 +44,7 @@ public class ControladorPersonajes : MonoBehaviour
 
             uiController.ActualizarPersonaje("Momia");
             camaraScript.ActualizarObjetivo(personajeActivo.transform);
+            fondoParallax.CambiarPersonajeActivo(personajeActivo.transform);
         }
         else
         {
@@ -48,6 +55,7 @@ public class ControladorPersonajes : MonoBehaviour
 
             uiController.ActualizarPersonaje("Arqueologo");
             camaraScript.ActualizarObjetivo(personajeActivo.transform);
+            fondoParallax.CambiarPersonajeActivo(personajeActivo.transform);
         }
     }
 }
