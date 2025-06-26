@@ -33,4 +33,8 @@ public class CamaraConLimites : MonoBehaviour
 
         transform.position = Vector3.SmoothDamp(transform.position, destino, ref velocidad, suavizado);
     }
+    public void ActualizarObjetivo(Transform nuevoObjetivo)
+    {
+        objetivo = nuevoObjetivo;
+    }
 }

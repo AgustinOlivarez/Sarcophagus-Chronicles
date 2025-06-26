@@ -18,8 +18,6 @@ public class CamaraSuave : MonoBehaviour
         if (objetivo == null) return;
 
         Vector3 destino = new Vector3(objetivo.position.x, objetivo.position.y, -10f);
-        //transform.position = Vector3.SmoothDamp(transform.position, destino, ref velocidad, tiempoSuavizado);
-
 
         Vector3 pos = transform.position;
         destino.x = Mathf.Clamp(destino.x, minX, maxX);

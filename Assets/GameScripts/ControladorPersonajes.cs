@@ -6,7 +6,7 @@ public class ControladorPersonajes : MonoBehaviour
     public GameObject arqueologo;
     public GameObject momia;
     public UIController uiController;
-    public CamaraSuave camaraScript;
+    public CamaraConLimites camaraScript;
 
     private GameObject personajeActivo;
     public ParallaxFondo fondoParallax;
