@@ -789,11 +789,6 @@ MonoBehaviour:
   spriteNormal: {fileID: 21300000, guid: a5aba0fe0dc55d944a5e1a604bc73dfc, type: 3}
   spriteAtaque: {fileID: 21300000, guid: d2de90814089747f9983e7720c48f9a1, type: 3}
   duracionAtaque: 0.3
---- !u!4 &519420036 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 6720031223928833741, guid: 8dad743bc4719df4cbfe7340a3b738f0, type: 3}
-  m_PrefabInstance: {fileID: 5298789531668695254}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &575711761
 GameObject:
   m_ObjectHideFlags: 0
@@ -1195,7 +1190,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 2ed4f597adcaf4ef6bb0841ef54f29e4, type: 2}
+  - {fileID: 2100000, guid: 2ef55b5f64f744f59bc6b4978b9a66bb, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -1253,8 +1248,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   personajeActivo: {fileID: 0}
-  camara: {fileID: 519420036}
   factorParallax: 0.1
+  maxOffsetX: 2.365
 --- !u!1 &1377115001
 GameObject:
   m_ObjectHideFlags: 0
@@ -1317,6 +1312,27 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1665498379 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 7248132517597966171, guid: 8dad743bc4719df4cbfe7340a3b738f0, type: 3}
+  m_PrefabInstance: {fileID: 5298789531668695254}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1665498382
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1665498379}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5887a7500d88b4049b7ba8a7236bdde9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  objetivo: {fileID: 0}
+  suavizado: 0.3
+  minLimite: {x: -11.827, y: 0}
+  maxLimite: {x: 10, y: 11.84224}
 --- !u!1 &1748407023
 GameObject:
   m_ObjectHideFlags: 0
@@ -1364,7 +1380,7 @@ MonoBehaviour:
   arqueologo: {fileID: 206168036}
   momia: {fileID: 300780747}
   uiController: {fileID: 0}
-  camaraScript: {fileID: 0}
+  camaraScript: {fileID: 1665498382}
   fondoParallax: {fileID: 1187786944}
 --- !u!1 &1758895951
 GameObject:
@@ -1644,12 +1660,19 @@ PrefabInstance:
       propertyPath: near clip plane
       value: 0.3
       objectReference: {fileID: 0}
+    - target: {fileID: 7879457773867423582, guid: 8dad743bc4719df4cbfe7340a3b738f0, type: 3}
+      propertyPath: orthographic size
+      value: 5
+      objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 587794951363413528, guid: 8dad743bc4719df4cbfe7340a3b738f0, type: 3}
     m_RemovedGameObjects:
     - {fileID: 2014324690863333542, guid: 8dad743bc4719df4cbfe7340a3b738f0, type: 3}
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 7248132517597966171, guid: 8dad743bc4719df4cbfe7340a3b738f0, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1665498382}
   m_SourcePrefab: {fileID: 100100000, guid: 8dad743bc4719df4cbfe7340a3b738f0, type: 3}
 --- !u!1001 &5993621495669807317
 PrefabInstance:
