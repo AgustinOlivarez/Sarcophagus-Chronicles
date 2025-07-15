@@ -10,7 +10,9 @@ public class ControladorPersonajes : MonoBehaviour
     
 
     private GameObject personajeActivo;
-    
+    private AtaqueCuerpoACuerpo ataqueArqueologo;
+    private AtaqueCuerpoACuerpo ataqueMomia;
+
     // Agrega una referencia al script MovimientoJugador de cada personaje
     private MovimientoJugador movimientoArqueologo;
     private MovimientoJugador movimientoMomia;
@@ -18,9 +20,11 @@ public class ControladorPersonajes : MonoBehaviour
 
     void Start()
     {
-        // Obtén los componentes MovimientoJugador de cada personaje al inicio
+        // Obtén los componentes MovimientoJugador y AtaqueCuerpoACuerpo de cada personaje al inicio
         movimientoArqueologo = arqueologo.GetComponent<MovimientoJugador>();
         movimientoMomia = momia.GetComponent<MovimientoJugador>();
+        ataqueArqueologo = arqueologo.GetComponent<AtaqueCuerpoACuerpo>();
+        ataqueMomia = momia.GetComponent<AtaqueCuerpoACuerpo>();
 
         // Inicializa el arqueólogo como personaje activo y desactiva el movimiento de la momia
         personajeActivo = arqueologo;
@@ -36,6 +40,13 @@ public class ControladorPersonajes : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.Tab))
         {
             CambiarPersonaje();
+        }
+        if (Input.GetKeyDown(KeyCode.Z))
+        {
+            if (personajeActivo == arqueologo && ataqueArqueologo.puedeAtacar)
+                StartCoroutine(ataqueArqueologo.EjecutarAtaque());
+            else if (personajeActivo == momia && ataqueMomia.puedeAtacar)
+                StartCoroutine(ataqueMomia.EjecutarAtaque());
         }
     }
 
