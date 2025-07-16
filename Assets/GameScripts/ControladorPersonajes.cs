@@ -49,7 +49,10 @@ public class ControladorPersonajes : MonoBehaviour
                 StartCoroutine(ataqueMomia.EjecutarAtaque());
         }
     }
-
+    public GameObject ObtenerPersonajeActivo()
+    {
+        return personajeActivo;
+    }
     void CambiarPersonaje()
     {
         Vector3 posicionActual = personajeActivo.transform.position;

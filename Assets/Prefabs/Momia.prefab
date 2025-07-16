@@ -89,8 +89,8 @@ GameObject:
   - component: {fileID: 4876315629269098499}
   - component: {fileID: 4000739303650611601}
   - component: {fileID: 846314431155391025}
-  - component: {fileID: 2381667842663623329}
   - component: {fileID: 4043354367566526511}
+  - component: {fileID: 2381667842663623329}
   - component: {fileID: 226816434928431639}
   - component: {fileID: 5030125072122790476}
   m_Layer: 0
@@ -241,6 +241,27 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 0.61661774, y: 0.91852057}
   m_EdgeRadius: 0
+--- !u!114 &4043354367566526511
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5643917687490251382}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 90a818c8b087f794aafa4027c835168c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  velocidad: 5
+  fuerzaSalto: 10
+  audioPasos: {fileID: 226816434928431639}
+  velocidadMinima: 0.1
+  chequeoSuelo: {fileID: 1078795080858277045}
+  radioChequeo: 0.2
+  capaSuelo:
+    serializedVersion: 2
+    m_Bits: 64
 --- !u!114 &2381667842663623329
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -266,27 +287,6 @@ MonoBehaviour:
   puedeAtacar: 1
   audioSource: {fileID: 5030125072122790476}
   sonidoGolpe: {fileID: 8300000, guid: 153136be253271a4dbb92dc3f59347ef, type: 3}
---- !u!114 &4043354367566526511
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5643917687490251382}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 90a818c8b087f794aafa4027c835168c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  velocidad: 5
-  fuerzaSalto: 10
-  audioPasos: {fileID: 226816434928431639}
-  velocidadMinima: 0.1
-  chequeoSuelo: {fileID: 1078795080858277045}
-  radioChequeo: 0.2
-  capaSuelo:
-    serializedVersion: 2
-    m_Bits: 64
 --- !u!82 &226816434928431639
 AudioSource:
   m_ObjectHideFlags: 0
@@ -393,7 +393,7 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 8300000, guid: 153136be253271a4dbb92dc3f59347ef, type: 3}
+  m_audioClip: {fileID: 0}
   m_PlayOnAwake: 1
   m_Volume: 1
   m_Pitch: 1
