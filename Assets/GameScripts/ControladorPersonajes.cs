@@ -88,4 +88,24 @@ public class ControladorPersonajes : MonoBehaviour
             
         }
     }
+    public void CambiarAPersonajeInicial()
+    {
+        if (personajeActivo == momia)
+        {
+            // Desactiva la momia y su movimiento
+            momia.SetActive(false);
+            movimientoMomia.enabled = false;
+
+            // Activa el arqueólogo y su movimiento
+            arqueologo.SetActive(true);
+            personajeActivo = arqueologo;
+            movimientoArqueologo.enabled = true;
+
+            uiController.ActualizarPersonaje("Arqueologo");
+        }
+        else
+        {
+            return;
+        }
+    }
 }

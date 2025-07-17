@@ -15,7 +15,6 @@ public class UIController : MonoBehaviour
 
     public void ActualizarVida(float vidaActual)
     {
-        Debug.Log("Actualizando vida: " + vidaActual);
         int vidaEntera = Mathf.FloorToInt(vidaActual); // Parte entera
         bool tieneMedio = (vidaActual % 1f) >= 0.5f;
 

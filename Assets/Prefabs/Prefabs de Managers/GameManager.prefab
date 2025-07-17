@@ -46,16 +46,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   fondo: {fileID: 0}
-  menuPrincipal: {fileID: 0}
-  menuGameOver: {fileID: 0}
-  start: 0
-  gameOver: 0
   velocidad: 2
-  col: {fileID: 0}
-  piedra1: {fileID: 0}
-  piedra2: {fileID: 0}
-  cols: []
-  obstaculos: []
+  vidaJugador: {fileID: 5502282808683965910}
+  posicionInicial: {x: 0, y: 0, z: 0}
+  controlador: {fileID: 0}
+  menuMuerte: {fileID: 0}
 --- !u!114 &5502282808683965910
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -73,3 +68,4 @@ MonoBehaviour:
   spriteArqueologo: {fileID: 0}
   spriteMomia: {fileID: 0}
   controlador: {fileID: 0}
+  menuMuerte: {fileID: 0}

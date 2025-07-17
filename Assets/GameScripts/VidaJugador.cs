@@ -9,10 +9,14 @@ public class VidaJugador : MonoBehaviour
     public SpriteRenderer spriteArqueologo;
     public SpriteRenderer spriteMomia;
     public ControladorPersonajes controlador;
-    void Start()
+    //Menu que se muestra cuando morimos
+    public GameObject menuMuerte;
+        void Start()
     {
+        menuMuerte.SetActive(false);
         uiController.ActualizarVida(vida);
     }
+    // Método para recibir daño del jugador
     public void RecibirDanoJugador(float cantidad)
     {
 
@@ -46,10 +50,16 @@ public class VidaJugador : MonoBehaviour
             tiempo += intervalo * 2;
         }
     }
-
+    //Para resetear la vida del jugador, se puede llamar desde el GameManager o desde un botón en el UI
+    public void ReiniciarVida()
+    {
+        vida = 5;
+        uiController.ActualizarVida(vida);
+    }
     void Morir()
     {
         Debug.Log("¡Jugador muerto!");
-        // Acá podrías reiniciar nivel, mostrar pantalla, etc.
+        menuMuerte.SetActive(true);
+        Time.timeScale = 1f; // opcional, para pausar el juego
     }
 }

@@ -5,76 +5,82 @@ using UnityEngine;
 public class GameManager : MonoBehaviour
 {
     public Renderer fondo;
-    public GameObject menuPrincipal;
-    public GameObject menuGameOver;
 
-    // Variable. Declarar comienzo del juego
-    public bool start = false;
-
-    // Cuando choca con un obstaculo. Termina el juego
-    public bool gameOver = false;
     //Declarar y poner un valor en velocidad (puede usarse para cualquier cosa por ahora)
     public float velocidad = 2;
+    //Declarar y poner un valor en la vida del jugador
+    public VidaJugador vidaJugador;
 
-    // Declarar el Suelo y piedras
-    public GameObject col;
-    public GameObject piedra1;
-    public GameObject piedra2;
-    
+    //Variables para checkpoint y respawn
+    public static GameManager Instance;
+    public Vector3 posicionInicial;
+    private Vector3 checkpointPosition;
+    public ControladorPersonajes controlador;
+    public GameObject menuMuerte;
 
-
-    // Listas
-    public List<GameObject> cols;
-    public List<GameObject> obstaculos;
     // Start is called before the first frame update
     void Start()
     {
-        // Crear piedra (no hago un bucle for porque solo soln 2 piedras)
-        obstaculos.Add(Instantiate(piedra1, new Vector2(14, -2), Quaternion.identity));
-        obstaculos.Add(Instantiate(piedra2, new Vector2(18, -2), Quaternion.identity));
+        posicionInicial = controlador.arqueologo.transform.position;
     }
 
     // Update is called once per frame
     void Update()
     {
-        fondo.material.mainTextureOffset = fondo.material.mainTextureOffset + new Vector2(0.02f, 0) * Time.deltaTime;
-
-        // Configuracion acciones teclas (Tecla X)
-        // X
-        if (start == false)
+        //Para probar
+        if (Input.GetKeyDown(KeyCode.R))
         {
-            if (Input.GetKeyDown(KeyCode.X))
-            {
-                start = true;
-            }
+            RespawnDesdeInicio();
         }
-
-        if (start == true && gameOver == true)
+        if (Input.GetKeyDown(KeyCode.C))
         {
-            menuGameOver.SetActive(true);
-            if (Input.GetKeyDown(KeyCode.X))
-            {
-                //SceneManager.LoadScene(SceneManager.GetActiveScene().name); (comento esto porq me daba error)
-            }
+            RespawnDesdeCheckpoint();
         }
+    }
+    //Respawn y checkpoints
+    private void Awake()
+    {
+        if (Instance == null) Instance = this;
+        else Destroy(gameObject);
+    }
 
-        if (start == true && gameOver == false)
-        {
-            menuPrincipal.SetActive(false);
-            fondo.material.mainTextureOffset = fondo.material.mainTextureOffset + new Vector2(0.015f, 0) * Time.deltaTime;
+    public void GuardarCheckpoint(Vector3 newPosition)
+    {
+        checkpointPosition = newPosition;
+    }
 
-            // Mover Obstaculos
-            for (int i = 0; i < obstaculos.Count; i++)
-            {
-                if (obstaculos[i].transform.position.x <= -10)
-                {
-                    float randomObs = Random.Range(11, 18);
-                    obstaculos[i].transform.position = new Vector3(randomObs, -2, 0);
-                }
-                obstaculos[i].transform.position = obstaculos[i].transform.position + new Vector3(-1, 0, 0) * Time.deltaTime * velocidad;
-            }
-        }
+    public void RespawnDesdeCheckpoint()
+    {
+        // Activar el personaje por defecto o el último usado, como prefieras
+        controlador.CambiarAPersonajeInicial();
+        Time.timeScale = 1f;
 
+        // Reposicionamos ambos personajes al checkpoint
+        controlador.arqueologo.transform.position = checkpointPosition;
+        controlador.momia.transform.position = checkpointPosition;
+
+        // Reiniciar vida
+        vidaJugador.ReiniciarVida();
+
+        // Cerrar el panel de muerte si estaba activo
+        menuMuerte.SetActive(false);
+    }
+        public void RespawnDesdeInicio()
+    {
+        // Activar personaje inicial o último usado (según cómo lo manejes)
+        controlador.CambiarAPersonajeInicial();
+        Time.timeScale = 1f;
+
+        // Reposicionar ambos personajes a la posición inicial
+        controlador.arqueologo.transform.position = posicionInicial;
+        controlador.momia.transform.position = posicionInicial;
+
+        // Reiniciar vida
+        vidaJugador.ReiniciarVida();
+
+
+        // Cerrar el panel de muerte (si lo estás desactivando así)
+        menuMuerte.SetActive(false);
     }
 }
 
