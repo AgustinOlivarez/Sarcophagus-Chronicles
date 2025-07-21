@@ -95,7 +95,7 @@ GameObject:
   - component: {fileID: 5030125072122790476}
   m_Layer: 0
   m_Name: Momia
-  m_TagString: Untagged
+  m_TagString: Jugador
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -262,6 +262,9 @@ MonoBehaviour:
   capaSuelo:
     serializedVersion: 2
     m_Bits: 64
+  spriteDerecha: {fileID: 21300000, guid: a5aba0fe0dc55d944a5e1a604bc73dfc, type: 3}
+  spriteIzquierda: {fileID: 21300000, guid: 17fc85a65519446349631b3076d0774a, type: 3}
+  ultimaDireccionX: 1
 --- !u!114 &2381667842663623329
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -283,6 +286,10 @@ MonoBehaviour:
   spriteRenderer: {fileID: 4876315629269098499}
   spriteNormal: {fileID: 21300000, guid: a5aba0fe0dc55d944a5e1a604bc73dfc, type: 3}
   spriteAtaque: {fileID: 21300000, guid: d2de90814089747f9983e7720c48f9a1, type: 3}
+  spriteDerecha: {fileID: 21300000, guid: d2de90814089747f9983e7720c48f9a1, type: 3}
+  spriteIzquierda: {fileID: 21300000, guid: 05680c6a07c6949bcb4d58c4878fcdeb, type: 3}
+  spriteAtaqueIzquierda: {fileID: 21300000, guid: 05680c6a07c6949bcb4d58c4878fcdeb, type: 3}
+  spriteAtaqueDerecha: {fileID: 21300000, guid: 2aa347a2b46664c4d958098fca25bd13, type: 3}
   duracionAtaque: 0.3
   puedeAtacar: 1
   audioSource: {fileID: 5030125072122790476}

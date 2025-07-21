@@ -72,8 +72,6 @@ public class AtaqueCuerpoACuerpo : MonoBehaviour
 
         // 🧍 Volver al sprite normal
         spriteRenderer.sprite = spriteNormal;
-
-        yield return new WaitForSeconds(0.1f);
         puedeAtacar = true;
     }
 

@@ -125,8 +125,8 @@ GameObject:
   - component: {fileID: 355491758361085234}
   - component: {fileID: 7416747154451728321}
   m_Layer: 0
-  m_Name: Jugador
-  m_TagString: Untagged
+  m_Name: "Arque\xF3logo"
+  m_TagString: Jugador
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -293,6 +293,9 @@ MonoBehaviour:
   capaSuelo:
     serializedVersion: 2
     m_Bits: 64
+  spriteDerecha: {fileID: 21300000, guid: 402d35a2e9ef21046b9c992af3551cf3, type: 3}
+  spriteIzquierda: {fileID: 21300000, guid: 978f7e94984214bf5b0034179ae8e35a, type: 3}
+  ultimaDireccionX: 1
 --- !u!114 &6057911360798706887
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -314,6 +317,10 @@ MonoBehaviour:
   spriteRenderer: {fileID: 4343551494272893321}
   spriteNormal: {fileID: 21300000, guid: 402d35a2e9ef21046b9c992af3551cf3, type: 3}
   spriteAtaque: {fileID: 21300000, guid: 2aa347a2b46664c4d958098fca25bd13, type: 3}
+  spriteDerecha: {fileID: 21300000, guid: 2aa347a2b46664c4d958098fca25bd13, type: 3}
+  spriteIzquierda: {fileID: 21300000, guid: 66168dca58521458f9f2faad07ec0ec0, type: 3}
+  spriteAtaqueIzquierda: {fileID: 21300000, guid: 66168dca58521458f9f2faad07ec0ec0, type: 3}
+  spriteAtaqueDerecha: {fileID: 21300000, guid: 2aa347a2b46664c4d958098fca25bd13, type: 3}
   duracionAtaque: 0.3
   puedeAtacar: 1
   audioSource: {fileID: 7416747154451728321}
@@ -425,7 +432,7 @@ AudioSource:
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 0}
-  m_PlayOnAwake: 1
+  m_PlayOnAwake: 0
   m_Volume: 1
   m_Pitch: 1
   Loop: 0
