@@ -291,7 +291,7 @@ MonoBehaviour:
   spriteDerecha: {fileID: 21300000, guid: a5aba0fe0dc55d944a5e1a604bc73dfc, type: 3}
   spriteIzquierda: {fileID: 21300000, guid: 17fc85a65519446349631b3076d0774a, type: 3}
   spriteAtaqueIzquierda: {fileID: 21300000, guid: 05680c6a07c6949bcb4d58c4878fcdeb, type: 3}
-  spriteAtaqueDerecha: {fileID: 21300000, guid: 2aa347a2b46664c4d958098fca25bd13, type: 3}
+  spriteAtaqueDerecha: {fileID: 21300000, guid: d2de90814089747f9983e7720c48f9a1, type: 3}
   duracionAtaque: 0.3
   puedeAtacar: 1
   audioSource: {fileID: 5030125072122790476}
