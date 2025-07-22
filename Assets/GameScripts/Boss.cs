@@ -13,7 +13,7 @@ public class Boss : MonoBehaviour
     public Sprite spriteNormalIzquierda;
     public Sprite spriteAtaqueIzquierda;
 
-    public GameObject zonaDeDaño; // tu área de ataque (debe estar en el lugar del rayo y desactivada por defecto)
+    public GameObject zonaDeDano; // tu ï¿½rea de ataque (debe estar en el lugar del rayo y desactivada por defecto)
 
     private SpriteRenderer spriteRenderer;
     private Rigidbody2D rb;
@@ -30,7 +30,7 @@ public class Boss : MonoBehaviour
         objetivoActual = puntoB;
         tiempoProximoSalto = Time.time + tiempoEntreSaltos;
 
-        zonaDeDaño.SetActive(false); // asegurarse que está desactivada
+        zonaDeDano.SetActive(false); // asegurarse que estï¿½ desactivada
     }
 
     void Update()
@@ -47,7 +47,7 @@ public class Boss : MonoBehaviour
         Vector2 direccion = (objetivoActual.position - transform.position).normalized;
         rb.velocity = new Vector2(direccion.x * 3f, fuerzaSalto);
 
-        // Elegir sprite y dirección
+        // Elegir sprite y direcciï¿½n
         mirandoDerecha = direccion.x > 0;
         spriteRenderer.sprite = mirandoDerecha ? spriteNormalDerecha : spriteNormalIzquierda;
 
@@ -64,8 +64,8 @@ public class Boss : MonoBehaviour
         // Cambiar sprite al de ataque
         spriteRenderer.sprite = mirandoDerecha ? spriteAtaqueDerecha : spriteAtaqueIzquierda;
 
-        // Activar zona de daño
-        zonaDeDaño.SetActive(true);
+        // Activar zona de daï¿½o
+        zonaDeDano.SetActive(true);
 
         // Desactivar tras un segundo
         Invoke("FinAtaque", 1f);
@@ -76,7 +76,7 @@ public class Boss : MonoBehaviour
         // Volver sprite a normal
         spriteRenderer.sprite = mirandoDerecha ? spriteNormalDerecha : spriteNormalIzquierda;
 
-        zonaDeDaño.SetActive(false);
+        zonaDeDano.SetActive(false);
         enAtaque = false;
     }
 }
