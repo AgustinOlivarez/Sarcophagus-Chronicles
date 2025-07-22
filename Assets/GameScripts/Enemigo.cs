@@ -10,7 +10,15 @@ public class Enemigo : MonoBehaviour
     public float dano = 0.5f;
     public float cooldown = 2f; // tiempo entre cada daño
     private bool puedeHacerDano = true;
+    public int vidaInicial = 3;
+    private Vector3 posicionInicial;
 
+    // Setear la posición inicial y la vida al inicio de cada enemigo
+    void Start()
+    {
+        posicionInicial = transform.position;
+        vidaInicial = vida;
+    }
     //Si el enemigo colisiona con el jugador, le hace daño
     private void OnCollisionEnter2D(Collision2D collision)
     {
@@ -36,8 +44,6 @@ public class Enemigo : MonoBehaviour
     public void RecibirDano(int cantidad)
     {
         vida -= cantidad;
-        Debug.Log($"{gameObject.name} recibi� {cantidad} de da�o. Vida restante: {vida}");
-
         if (vida <= 0)
         {
             Morir();
@@ -51,6 +57,16 @@ public class Enemigo : MonoBehaviour
 
     void Morir()
     {
-        Destroy(gameObject);
+        gameObject.SetActive(false);
+    }
+
+    // 🔁 Respawn: restaurar vida y reactivar
+    public void Respawnear()
+    {
+        vida = vidaInicial;
+        transform.position = posicionInicial; // opcional
+        gameObject.SetActive(true);
+        puedeHacerDano = true;
+        Debug.Log("Enemigo respawneado");
     }
 }

@@ -62,6 +62,12 @@ public class GameManager : MonoBehaviour
         // Reiniciar vida
         vidaJugador.ReiniciarVida();
 
+        //Respawnear enemigos
+        foreach (Enemigo enemigo in FindObjectsOfType<Enemigo>(true))
+        {
+            enemigo.Respawnear();
+        }
+
         // Cerrar el panel de muerte si estaba activo
         menuMuerte.SetActive(false);
     }
@@ -78,6 +84,11 @@ public class GameManager : MonoBehaviour
         // Reiniciar vida
         vidaJugador.ReiniciarVida();
 
+        //Respawnear enemigos
+        foreach (Enemigo enemigo in FindObjectsOfType<Enemigo>(true))
+        {
+            enemigo.Respawnear();
+        }
 
         // Cerrar el panel de muerte (si lo estás desactivando así)
         menuMuerte.SetActive(false);

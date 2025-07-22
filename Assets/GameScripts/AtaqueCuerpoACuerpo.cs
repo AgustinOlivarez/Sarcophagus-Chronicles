@@ -5,7 +5,8 @@ using UnityEngine;
 
 public class AtaqueCuerpoACuerpo : MonoBehaviour
 {
-    public Transform areaAtaque;
+    public Transform areaAtaqueIzquierda;
+    public Transform areaAtaqueDerecha;
     public float radioAtaque = 1f;
     public LayerMask capaEnemigos;
     public int dano = 1;
@@ -25,40 +26,27 @@ public class AtaqueCuerpoACuerpo : MonoBehaviour
 
 
     public IEnumerator EjecutarAtaque()
-    {
+    {   
         puedeAtacar = false;
 
-        // ▶️ Cambiar sprite según dirección
-        if (transform.localScale.x < 0)
-        {
-            spriteRenderer.sprite = spriteAtaqueIzquierda;
-        }
-        else
-        {
-            spriteRenderer.sprite = spriteAtaqueDerecha;
-        }
+        // Determinar dirección del personaje
+        MovimientoJugador movimiento = GetComponent<MovimientoJugador>();
+        bool atacandoIzquierda = movimiento.ultimaDireccionX < 0;
 
-        // 🔊 Reproducir sonido
+        // Cambiar sprite de ataque
+        spriteRenderer.sprite = atacandoIzquierda ? spriteAtaqueIzquierda : spriteAtaqueDerecha;
+
+        // Reproducir sonido
         if (audioSource != null && sonidoGolpe != null)
         {
             audioSource.PlayOneShot(sonidoGolpe);
-
         }
 
-        MovimientoJugador movimiento = GetComponent<MovimientoJugador>();
+        // 💥 Detectar enemigos en el área correspondiente
+        Transform areaAtaque = atacandoIzquierda ? areaAtaqueIzquierda : areaAtaqueDerecha;
 
-        if (movimiento.ultimaDireccionX < 0)
-        {
-            spriteRenderer.sprite = spriteIzquierda;
-        }
-        else
-        {
-            spriteRenderer.sprite = spriteDerecha;
-        }
-
-
-        // 💥 Detectar enemigos
         Collider2D[] enemigosGolpeados = Physics2D.OverlapCircleAll(areaAtaque.position, radioAtaque, capaEnemigos);
+
         foreach (Collider2D enemigo in enemigosGolpeados)
         {
             if (enemigo.TryGetComponent<Enemigo>(out var scriptEnemigo))
@@ -70,17 +58,25 @@ public class AtaqueCuerpoACuerpo : MonoBehaviour
         // ⏳ Esperar duración del ataque
         yield return new WaitForSeconds(duracionAtaque);
 
-        // 🧍 Volver al sprite normal
-        spriteRenderer.sprite = spriteNormal;
+        // 🧍 Volver al sprite de dirección
+        spriteRenderer.sprite = atacandoIzquierda ? spriteIzquierda : spriteDerecha;
+
         puedeAtacar = true;
     }
 
-    void OnDrawGizmosSelected()
+    // Visualización del área en la escena (opcional)
+    private void OnDrawGizmosSelected()
     {
-        if (areaAtaque != null)
+        if (areaAtaqueIzquierda != null)
         {
             Gizmos.color = Color.red;
-            Gizmos.DrawWireSphere(areaAtaque.position, radioAtaque);
+            Gizmos.DrawWireSphere(areaAtaqueIzquierda.position, radioAtaque);
+        }
+        if (areaAtaqueDerecha != null)
+        {
+            Gizmos.color = Color.green;
+            Gizmos.DrawWireSphere(areaAtaqueDerecha.position, radioAtaque);
         }
     }
 }
+
