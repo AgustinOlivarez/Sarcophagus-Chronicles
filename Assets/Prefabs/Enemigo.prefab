@@ -175,6 +175,8 @@ MonoBehaviour:
   vida: 3
   dano: 0.5
   cooldown: 2
+  vidaInicial: 3
+  panelVictoria: {fileID: 0}
 --- !u!114 &5220325896307060067
 MonoBehaviour:
   m_ObjectHideFlags: 0

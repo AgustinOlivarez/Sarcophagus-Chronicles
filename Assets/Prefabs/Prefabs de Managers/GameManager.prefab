@@ -45,12 +45,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 81bd0b08d13014fbda3873dded23732e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  fondo: {fileID: 0}
   velocidad: 2
   vidaJugador: {fileID: 5502282808683965910}
   posicionInicial: {x: 0, y: 0, z: 0}
   controlador: {fileID: 0}
   menuMuerte: {fileID: 0}
+  menuVictoria: {fileID: 0}
 --- !u!114 &5502282808683965910
 MonoBehaviour:
   m_ObjectHideFlags: 0

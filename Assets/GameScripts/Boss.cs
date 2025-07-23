@@ -69,9 +69,5 @@ public class Boss : MonoBehaviour
         // No cambia el sprite, porque salta en el lugar
     }
     
-    void Morir()
-    {
-        gameObject.SetActive(false);
-        
-    }
+
 }

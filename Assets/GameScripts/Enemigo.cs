@@ -3,6 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+
 public class Enemigo : MonoBehaviour
 {
     public int vida = 3;
@@ -12,6 +13,7 @@ public class Enemigo : MonoBehaviour
     private bool puedeHacerDano = true;
     public int vidaInicial = 3;
     private Vector3 posicionInicial;
+    public GameObject panelVictoria;
 
     // Setear la posición inicial y la vida al inicio de cada enemigo
     void Start()
@@ -58,6 +60,11 @@ public class Enemigo : MonoBehaviour
     void Morir()
     {
         gameObject.SetActive(false);
+        if (CompareTag("Boss") && panelVictoria != null)
+        {
+            panelVictoria.SetActive(true);
+            Time.timeScale = 0f;
+        }
         
     }
     

@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class GameManager : MonoBehaviour
 {
@@ -14,6 +15,7 @@ public class GameManager : MonoBehaviour
     public ControladorPersonajes controlador;
     public GameObject menuMuerte;
     public GameObject menuVictoria;
+    private string SampleScene = "SampleScene";
 
     private void Awake()
     {
@@ -81,6 +83,12 @@ public class GameManager : MonoBehaviour
         menuMuerte.SetActive(false);
         menuVictoria.SetActive(false);
     }
-
+    public void RespawnDesdeLvl1()
+    {
+        SceneManager.LoadScene(SampleScene);
+        menuVictoria.SetActive(false);
+        RespawnDesdeInicio();
+        Time.timeScale = 1f;
+    }
     
 }
