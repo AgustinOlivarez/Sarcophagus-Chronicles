@@ -55,11 +55,12 @@ public class Enemigo : MonoBehaviour
         throw new NotImplementedException();
     }
 
-    void Morir()
+    protected virtual void Morir()
     {
         gameObject.SetActive(false);
+        
     }
-
+    
     // 🔁 Respawn: restaurar vida y reactivar
     public void Respawnear()
     {
