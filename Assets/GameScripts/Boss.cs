@@ -68,4 +68,10 @@ public class Boss : MonoBehaviour
         rb.velocity = new Vector2(0, fuerzaSalto);
         // No cambia el sprite, porque salta en el lugar
     }
+    
+    void Morir()
+    {
+        gameObject.SetActive(false);
+        
+    }
 }

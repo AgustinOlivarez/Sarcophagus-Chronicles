@@ -13,7 +13,7 @@ public class GameManager : MonoBehaviour
     private Vector3 checkpointPosition;
     public ControladorPersonajes controlador;
     public GameObject menuMuerte;
-    public GameObject panelVictoria;
+    public GameObject menuVictoria;
 
     private void Awake()
     {
@@ -59,7 +59,9 @@ public class GameManager : MonoBehaviour
         }
 
         menuMuerte.SetActive(false);
+        menuVictoria.SetActive(false);
     }
+
 
     public void RespawnDesdeInicio()
     {
@@ -77,11 +79,8 @@ public class GameManager : MonoBehaviour
         }
 
         menuMuerte.SetActive(false);
+        menuVictoria.SetActive(false);
     }
 
-    public void MostrarPanelVictoria()
-    {
-        Time.timeScale = 0f;
-        panelVictoria.SetActive(true);
-    }
+    
 }

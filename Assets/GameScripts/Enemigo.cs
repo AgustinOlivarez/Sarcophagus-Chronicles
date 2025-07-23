@@ -55,7 +55,7 @@ public class Enemigo : MonoBehaviour
         throw new NotImplementedException();
     }
 
-    protected virtual void Morir()
+    void Morir()
     {
         gameObject.SetActive(false);
         
