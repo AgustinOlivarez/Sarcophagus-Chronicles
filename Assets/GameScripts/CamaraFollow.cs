@@ -1,10 +1,8 @@
 using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public class CamaraFollow : MonoBehaviour
 {
-    public string tagJugador = "Jugador";
     public float velocidadTransicion = 30f;
     public float tiempoCooldown = 1f;
 
@@ -15,14 +13,6 @@ public class CamaraFollow : MonoBehaviour
 
     void Start()
     {
-        jugador = GameObject.FindGameObjectWithTag(tagJugador)?.transform;
-
-        if (jugador == null)
-        {
-            Debug.LogError("No se encontró ningún objeto con el tag 'Jugador'");
-            return;
-        }
-
         anchoPantalla = Camera.main.orthographicSize * 2f * Camera.main.aspect;
     }
 
@@ -47,7 +37,7 @@ public class CamaraFollow : MonoBehaviour
         }
     }
 
-    System.Collections.IEnumerator MoverCamara(Vector3 destino)
+    IEnumerator MoverCamara(Vector3 destino)
     {
         enTransicion = true;
 
@@ -59,5 +49,10 @@ public class CamaraFollow : MonoBehaviour
 
         transform.position = destino;
         enTransicion = false;
+    }
+
+    public void EstablecerJugador(Transform nuevoJugador)
+    {
+        jugador = nuevoJugador;
     }
 }

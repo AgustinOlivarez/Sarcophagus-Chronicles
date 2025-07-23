@@ -8,12 +8,11 @@ public class ControladorPersonajes : MonoBehaviour
     public GameObject momia;
     public UIController uiController;
     
-
+    public CamaraFollow camaraFollow;
     private GameObject personajeActivo;
     private AtaqueCuerpoACuerpo ataqueArqueologo;
     private AtaqueCuerpoACuerpo ataqueMomia;
 
-    // Agrega una referencia al script MovimientoJugador de cada personaje
     private MovimientoJugador movimientoArqueologo;
     private MovimientoJugador movimientoMomia;
 
@@ -33,6 +32,8 @@ public class ControladorPersonajes : MonoBehaviour
 
         movimientoArqueologo.enabled = true; // Habilita el script de movimiento para el arqueólogo
         movimientoMomia.enabled = false;    // Deshabilita el script de movimiento para la momia
+        camaraFollow.EstablecerJugador(personajeActivo.transform);
+
     }
 
     void Update()
@@ -67,10 +68,11 @@ public class ControladorPersonajes : MonoBehaviour
             momia.SetActive(true);
             momia.transform.position = posicionActual;
             personajeActivo = momia;
-            movimientoMomia.enabled = true; 
-
+            movimientoMomia.enabled = true;
             uiController.ActualizarPersonaje("Momia");
-            
+            camaraFollow.EstablecerJugador(personajeActivo.transform);
+
+
         }
         else // Si el personaje activo es la momia
         {
@@ -82,10 +84,11 @@ public class ControladorPersonajes : MonoBehaviour
             arqueologo.SetActive(true);
             arqueologo.transform.position = posicionActual;
             personajeActivo = arqueologo;
-            movimientoArqueologo.enabled = true; 
-
+            movimientoArqueologo.enabled = true;
             uiController.ActualizarPersonaje("Arqueologo");
-            
+            camaraFollow.EstablecerJugador(personajeActivo.transform);
+
+
         }
     }
     public void CambiarAPersonajeInicial()
